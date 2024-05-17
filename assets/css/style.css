@@ -28,15 +28,12 @@ font-family: 'Poppins', sans-serif;
 *{
     padding: 0;
     margin: 0;
-	overflow: hidden;
-}
-
-*{
-	-webkit-box-sizing:border-box;
+	ox-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 	box-sizing:border-box;
+	overflow: hidden;
 }
 body{
 	font-family: 'Poppins', sans-serif;
