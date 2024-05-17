@@ -33,7 +33,7 @@ font-family: 'Poppins', sans-serif;
 	-o-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 	box-sizing:border-box;
-	overflow: auto;
+	
 }
 body{
 	font-family: 'Poppins', sans-serif;
@@ -101,6 +101,7 @@ html,body{
 .top-area {
     position: relative;
     z-index: 9999;
+	overflow: auto;
 }
 @media (min-width: 1024px){}
 nav.navbar.bootsnav.no-background {
