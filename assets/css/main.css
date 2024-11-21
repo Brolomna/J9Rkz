@@ -1161,3 +1161,34 @@ input, select, textarea {
 .dropdown a.dropbtn {
   cursor: pointer; /* Show pointer for Knowledge Hub link */
 }
+
+/* Mobile View (below 768px) */
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    justify-content: center; /* Center the navbar items */
+    width: 100%; /* Ensure the navbar takes full width */
+  }
+
+  .navbar ul {
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 0;
+  }
+
+  .navbar li {
+    margin: 10px 0; /* Add margin between items for mobile */
+  }
+
+  .navbar a {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    padding: 8px 15px; /* Adjust padding for mobile */
+  }
+
+  /* Optional: If you want to make the dropdown centered too */
+  .dropdown-content {
+    left: 50%; /* Position the dropdown from the left center of the parent */
+    transform: translateX(-50%); /* Offset by 50% of its width to center it */
+  }
+}
