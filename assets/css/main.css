@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
 
-/*
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -529,7 +523,11 @@ input, select, textarea {
 			opacity: 1;
 		}
 	}
-
+	
+	
+	
+	
+	
 	#header {
 		-moz-animation: header 1s 2.25s forwards;
 		-webkit-animation: header 1s 2.25s forwards;
@@ -1078,4 +1076,88 @@ input, select, textarea {
 
 		#header nav {
 			padding: 0 1em;
-		} }
+		} 
+		}
+	
+
+
+/* Topbar Navigation */
+#topbar {
+  background: transparent; /* Transparent background */
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #fff; /* White text */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent; /* Underline on hover */
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #fff; /* Underline appears on hover */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none !important; /* Hidden by default */
+  position: absolute;
+  flex: initial;
+  background-color: rgba(0, 0, 0, 0.8); /* Dropdown background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove bullets */
+  min-width: 150px; /* Ensure dropdown has a set width */
+  z-index: 1000; /* Place above other elements */
+  text-align: center;
+  left: 50%; /* Position the dropdown from the left center of the parent */
+  transform: translateX(-50%); /* Offset by 50% of its own width to center it */
+}
+
+/* Dropdown Items */
+.dropdown-content li {
+  width: 100%; /* Full width for all dropdown items */
+  margin: 0;
+}
+
+.dropdown-content a {
+  display: block; /* Stack dropdown items vertically */
+  padding: 10px;
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underlines */
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757; /* Highlight on hover */
+  text-align: center;
+}
+
+/* Show Dropdown When Hovering Over Knowledge Hub */
+.dropdown:hover .dropdown-content {
+  display: block !important; /* Only show dropdown when parent is hovered */
+}
+
+.dropdown a.dropbtn {
+  cursor: pointer; /* Show pointer for Knowledge Hub link */
+}
