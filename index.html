@@ -10,39 +10,25 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
-		<div id="wrapper">
+	<body class="is-preload index-page">
+		<div id="wrapper" class="index-wrapper">
 			<div id="bg"></div>
 			<div id="overlay"></div>
-			<div id="main">
-
-				<body>
-					  <!-- Top Navigation Bar -->
+			
+					<!-- Top Navigation Bar -->
 					  <header id="topbar">
 						<nav class="navbar">
 						  <ul>
 							<li><a href="index.html">Home</a></li>
-							<li class="dropdown">
-							  <a href="#" class="dropbtn">Knowledge Hub</a>
-							  <ul class="dropdown-content">
-								<li><a href="#system-setup">System Setup</a></li>
-								<li><a href="#linux-basics">Linux Basics</a></li>
-								<li><a href="#networking">Networking</a></li>
-								<li><a href="#knowledge-hub.html">View All</a></li>
-							  </ul>
-							</li>
+							<li><a href="knowledge-hub.html">Knowledge Hub</a></li>
 							<li><a href="#about">About Me</a></li>
 							<li><a href="#contact">Contact</a></li>
 						  </ul>
 						</nav>
 					  </header>
-
+			<div id="main" class="main-index">
 					  <!-- Main Header with Social Icons -->
-					  <div id="wrapper">
-						<div id="bg"></div>
-						<div id="overlay"></div>
-						<div id="main">
-						  <header id="header">
+					  	  <header id="header">
 							<h1>Anmol Siwa</h1>
 							<p>ESL Teacher &nbsp;&bull;&nbsp; Cybersecurity Enthusiast &nbsp;&bull;&nbsp; Gamer</p>
 							<nav>
@@ -55,20 +41,16 @@
 							  </ul>
 							</nav>
 						  </header>
-						</div>
-					  </div>
-
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p>Design <a href="https://html5up.net/">HTML5 UP</a>. Licensed under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
-					</footer>
-				</body>
 			</div>
 		</div>
+		
+				<!-- Footer -->
+					<footer class="footer-index">
+						<p>Design <a href="https://html5up.net/">HTML5 UP</a>. Licensed under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+					</footer>
 		<script>
 			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
+			window.ontouchmove = function() { 	return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
 	</body>
