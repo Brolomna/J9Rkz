@@ -765,6 +765,7 @@ input, select, textarea {
 		text-align: center;
 		width: 100%;
 	}
+	
 
 	.footer-index {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
@@ -957,7 +958,9 @@ input, select, textarea {
 			}
 
 			body, input, select, textarea {
+				flex-direction: column;
 				font-size: 11pt;
+				display: flex;
 			}
 
 		/* BG */
@@ -1148,7 +1151,7 @@ input, select, textarea {
   left: 0;
   width: 100%;
   z-index: 1000;
-  height: 60px;
+  height: auto;
 }
 
 .navbar ul {
@@ -1171,6 +1174,8 @@ input, select, textarea {
   padding: 5px 10px;
   border-bottom: 2px solid transparent; /* Underline on hover */
   transition: border-bottom 0.2s ease-in-out;
+  display: inline-block;
+  text-align: center;
 }
 
 .navbar a:hover {
@@ -1233,9 +1238,9 @@ input, select, textarea {
 
   .navbar ul {
     display: flex; /* Make it a flex container */
-    flex-direction: horizontal; /* Stack the items vertically */
+    flex-direction: row; /* Stack the items vertically */
     align-items: center; /* Center items horizontally */
-	text-align: center;
+    text-align: center;
     padding: 0;
   }
 
@@ -1249,13 +1254,45 @@ input, select, textarea {
     padding: 8px 15px; /* Adjust padding for mobile */
 	text-align: center;
   }
-
-  /* Optional: If you want to make the dropdown centered too */
-  .dropdown-content {
-    left: 50%; /* Position the dropdown from the left center of the parent */
-    transform: translateX(-50%); /* Offset by 50% of its width to center it */
-	text-align: center;
+  
+  .title {
+	  font-size: 13vw;
+	  line-height: 1.2;
+	  text-align: center;
+	 }
+  
+  #topbar {
+	  height: 120px;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	 }
+  
+  
+  main {
+	  position: relative;
+	  overflow-x: visible;
+	  overflow-y: hidden;
+	  margin-top: 60px;
+	  clip-path: inset(60px 0 0 0);
+	 }
+  
+  
+  p.sub-topic {
+	  margin-top: 20px;
   }
+  
+  #wrapper {
+	  overflow-y: visible;
+	 }
+  
+  .page-header {
+	  overflow: visible;
+  }
+
+
+  
+  
 }
 
 
@@ -1276,7 +1313,7 @@ input, select, textarea {
 
 .sub-topic {
 	font-size: 30%;
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 .card-container {
@@ -1284,7 +1321,7 @@ input, select, textarea {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center; /* Center cards on the page */
-  padding: 80px;
+  padding: 70px;
 }
 
 .card {
