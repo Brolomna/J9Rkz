@@ -961,6 +961,7 @@ input, select, textarea {
 				flex-direction: column;
 				font-size: 11pt;
 				display: flex;
+				overflow-y: auto;
 			}
 
 		/* BG */
@@ -1259,6 +1260,7 @@ input, select, textarea {
 	  font-size: 13vw;
 	  line-height: 1.2;
 	  text-align: center;
+	  position: relative;
 	 }
   
   #topbar {
@@ -1270,9 +1272,9 @@ input, select, textarea {
   
   
   main {
-	  position: relative;
-	  overflow-x: visible;
-	  overflow-y: hidden;
+	  position: static;
+	  overflow-x: hidden;
+	  overflow-y: visible;
 	  margin-top: 60px;
 	  clip-path: inset(60px 0 0 0);
 	 }
@@ -1283,12 +1285,19 @@ input, select, textarea {
   }
   
   #wrapper {
-	  overflow-y: visible;
+	  overflow-y: hidden;
 	 }
   
   .page-header {
 	  overflow: visible;
   }
+  
+  
+  section.card-container {
+	  padding: 40px;
+	 }
+  
+
 
 
   
