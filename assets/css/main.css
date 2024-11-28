@@ -1294,7 +1294,7 @@ input, select, textarea {
   
   
   section.card-container {
-	  padding: 40px;
+	  padding: 70px;
 	 }
   
 
@@ -1330,6 +1330,7 @@ input, select, textarea {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center; /* Center cards on the page */
+  align-items: center;
   padding: 70px;
 }
 
