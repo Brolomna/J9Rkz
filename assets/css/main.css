@@ -2,7 +2,6 @@
 @import url("fontawesome-all.min.css");
 
 
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -79,6 +78,7 @@ input, select, textarea {
 		background: #fff;
 		position: relative;
 		overflow-y: visible;
+		width: 100vw;
 	}
 
 	body.index-page {
@@ -388,6 +388,8 @@ input, select, textarea {
 		height: 100vh;
 		left: 0;
 		position: relative;
+		display: flex;
+		flex-direction: column;
 		text-align: center;
 		top: 0;
 		width: 100%;
@@ -395,6 +397,7 @@ input, select, textarea {
 		padding-top: 60px;
 		overflow-y: scroll;
 		clip-path: inset(60px 0 0 60px);
+		align-items: center;
 	}
 
 	#main.main-index {
@@ -1065,69 +1068,67 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
 
 		/* BG */
+		@-moz-keyframes bg {
+			0% {
+				-moz-transform: translate3d(0, 0, 0);
+				-webkit-transform: translate3d(0, 0, 0);
+				-ms-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
 
-			@-moz-keyframes bg {
-				0% {
-					-moz-transform: translate3d(0,0,0);
-					-webkit-transform: translate3d(0,0,0);
-					-ms-transform: translate3d(0,0,0);
-					transform: translate3d(0,0,0);
-				}
-
-				100% {
-					-moz-transform: translate3d(-412.5px,0,0);
-					-webkit-transform: translate3d(-412.5px,0,0);
-					-ms-transform: translate3d(-412.5px,0,0);
-					transform: translate3d(-412.5px,0,0);
-				}
-
-	}
+			100% {
+				-moz-transform: translate3d(-412.5px, 0, 0);
+				-webkit-transform: translate3d(-412.5px, 0, 0);
+				-ms-transform: translate3d(-412.5px, 0, 0);
+				transform: translate3d(-412.5px, 0, 0);
+			}
+		}
 
 		@-webkit-keyframes bg {
 			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
+				-moz-transform: translate3d(0, 0, 0);
+				-webkit-transform: translate3d(0, 0, 0);
+				-ms-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
 			}
 
 			100% {
-				-moz-transform: translate3d(-412.5px,0,0);
-				-webkit-transform: translate3d(-412.5px,0,0);
-				-ms-transform: translate3d(-412.5px,0,0);
-				transform: translate3d(-412.5px,0,0);
+				-moz-transform: translate3d(-412.5px, 0, 0);
+				-webkit-transform: translate3d(-412.5px, 0, 0);
+				-ms-transform: translate3d(-412.5px, 0, 0);
+				transform: translate3d(-412.5px, 0, 0);
 			}
-			}
+		}
 
 		@-ms-keyframes bg {
 			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
+				-moz-transform: translate3d(0, 0, 0);
+				-webkit-transform: translate3d(0, 0, 0);
+				-ms-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
 			}
 
 			100% {
-				-moz-transform: translate3d(-412.5px,0,0);
-				-webkit-transform: translate3d(-412.5px,0,0);
-				-ms-transform: translate3d(-412.5px,0,0);
-				transform: translate3d(-412.5px,0,0);
+				-moz-transform: translate3d(-412.5px, 0, 0);
+				-webkit-transform: translate3d(-412.5px, 0, 0);
+				-ms-transform: translate3d(-412.5px, 0, 0);
+				transform: translate3d(-412.5px, 0, 0);
 			}
 		}
 
 		@keyframes bg {
 			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
+				-moz-transform: translate3d(0, 0, 0);
+				-webkit-transform: translate3d(0, 0, 0);
+				-ms-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
 			}
 
 			100% {
-				-moz-transform: translate3d(-412.5px,0,0);
-				-webkit-transform: translate3d(-412.5px,0,0);
-				-ms-transform: translate3d(-412.5px,0,0);
-				transform: translate3d(-412.5px,0,0);
+				-moz-transform: translate3d(-412.5px, 0, 0);
+				-webkit-transform: translate3d(-412.5px, 0, 0);
+				-ms-transform: translate3d(-412.5px, 0, 0);
+				transform: translate3d(-412.5px, 0, 0);
 			}
 		}
 
@@ -1136,13 +1137,15 @@ input, select, textarea {
 			width: 1237.5px;
 		}
 
-	/* Header */
-
+		/* Header */
 		#header nav {
 			padding: 0 1em;
-		} 
 		}
-	
+		
+		#main.main-index {
+			height: 100%;
+		}
+	}
 
 
 /* Topbar Navigation */
@@ -1295,15 +1298,6 @@ input, select, textarea {
   }
   
   
-  section.card-container {
-	  padding: 70px;
-	 }
-  
-
-
-
-  
-  
 }
 
 
@@ -1374,3 +1368,72 @@ input, select, textarea {
 ::-webkit-scrollbar {
   display: none; /* Hides the scrollbar in WebKit-based browsers (Chrome, Safari) */
 }
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Blog Content Background Box with Cybersecurity Techy Gradient Border */
+.blog-content {
+  background: linear-gradient(to bottom right, #0a1d38, #1d3a5d); /* Dark blue gradient */
+  color: #f0f0f0; /* Light text for readability */
+  padding: 30px; /* Space inside the box */
+  margin: 1px; /* Center the box with vertical spacing */
+  width: 100%; /* Responsive width */
+   /* Limit maximum width */
+  border-radius: 15px; /* Rounded corners */
+  text-align: left; /* Align text to the left */
+}
+
+/* For the blog title */
+.title-blog {
+  display: inline;
+  font-size: 5.5rem; /* Larger font size for the blog title */
+  font-weight: bold; /* Make the title bold */
+  color: #00f1ff; /* Neon cyan for the title to match the techy theme */
+  margin-bottom: 10px; /* Space between title and sub-topic */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for text readability */
+  
+  /* Neon cyan border under the title */
+  border-bottom: 3px solid #28b7d7; /* Neon cyan border under the title */
+}
+
+
+.sub-topic-blog {
+	font-size: 30%;
+	margin-top: 30px;
+}
+
+/* For the blog section header */
+.page-header {
+  background: linear-gradient(to bottom right, #0a1d38, #1d3a5d);
+  color: #f0f0f0;
+  padding: 40px;
+  width: 100%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Wrapper for the neon border */
+.blog-content-wrapper {
+  min-width: 300px;
+  position: relative;
+  padding: 6px; /* Space between content and the border */
+  border-radius: 15px; /* Rounded corners for the neon border */
+  background: linear-gradient(45deg, #00f1ff, #00bcd4, #0099cc, #00f1ff); /* Neon gradient border */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Optional soft shadow for depth */
+   /* Ensure it doesn’t stretch too far */
+  width: 90%;
+  max-width: 1715px; /* Limit maximum width */
+  margin: 40px; /* Center it horizontally */
+}
+
