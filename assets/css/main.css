@@ -2,7 +2,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1311,6 +1310,270 @@ input, select, textarea {
 	  overflow: visible;
   }
   
+  .title-blog {
+	  /* font-size: clamp(3rem, 5vw, 5rem) !important; */
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  !i;
+	  !;
+	 }
+  
   
   
   
@@ -1323,7 +1586,6 @@ input, select, textarea {
 	position: relative;
 	text-align: center;
 	top: 0;
-	font-size: 500%;
 	height: auto;
 	line-height: normal;
 }	
@@ -1419,7 +1681,7 @@ input, select, textarea {
 /* For the blog title */
 .title-blog {
   display: inline;
-  font-size: 5rem; /* Larger font size for the blog title */
+  font-size: clamp(3rem, 10vw, 5rem); /* Larger font size for the blog title */
   font-weight: bold; /* Make the title bold */
   color: #00f1ff; /* Neon cyan for the title to match the techy theme */
   margin-bottom: 10px; /* Space between title and sub-topic */
@@ -1432,17 +1694,18 @@ input, select, textarea {
 
 .sub-topic-blog {
 	font-size: 30%;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 /* For the blog section header */
 .page-header {
   background: linear-gradient(to bottom right, #0a1d38, #1d3a5d);
   color: #f0f0f0;
-  padding: 40px;
+  padding: 10px;
   width: 100%;
   border-radius: 15px;
   text-align: center;
+  font-size: clamp(3.5rem, 5vw, 5rem);
 }
 
 /* Wrapper for the neon border */
@@ -1455,13 +1718,17 @@ input, select, textarea {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Optional soft shadow for depth */
    /* Ensure it doesn’t stretch too far */
   width: 90%;
-  max-width: 1715px; /* Limit maximum width */
+  max-width: 1750px; /* Limit maximum width */
   margin: 40px; /* Center it horizontally */
 }
 
 .blog-black-wrapper {
-  background-color: black; /* Sets the background to black */
+  background-color: rgba(0, 0, 0, 0.7); /* Sets the background to black */
   /*  color: white; /* Optional: makes text color white for better contrast and readability */
   position: relative;
-  width: 90vw;
+  width: 90%;
+  max-width: 1750px;
+  justify-items: center;
+  margin: auto;
+  padding-bottom: 15px;
 }
