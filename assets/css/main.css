@@ -1299,8 +1299,8 @@ input, select, textarea {
   
   
   p.sub-topic {
-	  margin-top: 20px;
-  }
+	 font-size: clamp(1rem, 5vw, 5rem);
+	 }
   
   #wrapper {
 	  overflow-y: hidden;
@@ -1309,9 +1309,6 @@ input, select, textarea {
   .page-header {
 	  overflow: visible;
   }
-  
-  .title-blog {
-	  /* font-size: clamp(3rem, 5vw, 5rem) !important; */
 	  
 	  
 	  
@@ -1584,7 +1581,6 @@ input, select, textarea {
 
 .page-header {
 	position: relative;
-	text-align: center;
 	top: 0;
 	height: auto;
 	line-height: normal;
@@ -1594,9 +1590,11 @@ input, select, textarea {
 	font-weight: bold;
 }
 
+
+
+
 .sub-topic {
-	font-size: 30%;
-	margin-top: 30px;
+	font-size: 40%;
 }
 
 .card-container {
@@ -1606,6 +1604,7 @@ input, select, textarea {
   justify-content: center; /* Center cards on the page */
   align-items: center;
   padding: 70px;
+  padding-top: 40px;
 }
 
 .card {
@@ -1720,6 +1719,7 @@ input, select, textarea {
   width: 90%;
   max-width: 1750px; /* Limit maximum width */
   margin: 40px; /* Center it horizontally */
+  margin-bottom: 0px;
 }
 
 .blog-black-wrapper {
