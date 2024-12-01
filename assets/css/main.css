@@ -1309,6 +1309,9 @@ input, select, textarea {
   .page-header {
 	  overflow: visible;
   }
+  
+  .title-blog {
+	  /* font-size: clamp(3rem, 5vw, 5rem) !important; */
 	  
 	  
 	  
