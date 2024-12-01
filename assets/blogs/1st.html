@@ -28,50 +28,78 @@
         </header>
 
         <main>
-            <div class="blog-content-wrapper" >
+			<div class="blog-black-wrapper">
+			<div class="blog-content-wrapper" >
 			<section class="page-header">
-                <h1 class="title-blog">Blog Title</h1>
-                <p class="sub-topic-blog">A detailed guide or tutorial about the topic.</p>
+                <h1 class="title-blog">Mount Partitions as R/W</h1>
+                <p class="sub-topic-blog">A detailed guide on how to mount a Windows NTFS Partition as Read-Write in Linux to transfer files.</p>
             </section>
 			</div>
 
             <!-- Blog Content -->
+			
 			<div class="blog-content-wrapper">
             <div class="blog-content">
                 <article>
-                    <p>
-                        Welcome to this in-depth guide on [Topic]. Here, we will explore various aspects of the topic,
-                        providing insights, tips, and techniques to help you understand it better.
-                    </p>
+					  <p>I’m working from a Live USB with Linux (you know, that cool OS you can run from a USB stick without messing with your main system). I needed to copy some files to my Windows partition, specifically my “Regular D” drive. But when I tried to transfer files over, Linux was like, “Nah, bro, I’m not gonna let you write to this NTFS partition.”</p><br>
+					  
+					  <p>It was stuck in read-only mode. Ugh.</p><br>
 
-                    <h2>Section 1: Introduction</h2>
-                    <p>
-                        Begin by understanding the basics of [Topic]. This includes its purpose, importance, and how it fits
-                        into the bigger picture.
-                    </p>
+					  <p>But don’t worry, I didn’t freak out. Here’s how I pulled it off, step-by-step. And don’t worry, it’s not as complicated as it sounds. I promise.</p><br>
 
-                    <h2>Section 2: Detailed Explanation</h2>
-                    <p>
-                        In this section, we dive deeper into the core concepts, examples, and practical applications of
-                        [Topic]. Consider the following points:
-                    </p>
-                    <ul>
-                        <li>Key concept 1: Explanation and example.</li>
-                        <li>Key concept 2: Explanation and example.</li>
-                        <li>Key concept 3: Explanation and example.</li>
-                    </ul>
+					  <h2><u><b>Step 1: Find the Partition</b></u></h2><br>
+					  <p>First things first, I needed to figure out which partition was my “Regular D” drive. So, I ran a quick command to list all my drives and partitions. This is how you can figure out which one is your D drive (mine was <code><b>/dev/sda5</b></code>, but it could be different for you).</p><br>
 
-                    <h2>Section 3: Conclusion</h2>
-                    <p>
-                        Summarize the main points discussed in the blog. Encourage readers to explore more or take
-                        actionable steps based on the content.
-                    </p>
+					  <p>How to know it? Just use the command in the terminal:</p><br>
+					  <code><b>lsblk</b></code>
+					 
 
-                    <blockquote>
-                        “A relevant quote or insightful comment can go here to inspire or emphasize the content.”
+					  <p><br>Then it will show you a bunch of gobbledygook. You can identify it by looking at the storage size. Or you can do another command:</p><br>
+					  <code><b>fdisk -l</b></code>
+
+					  <p><br>It will show you Disk models. Your SSD, your Flash Disk (USB), and others if you have. Under each Disk model, you can see all the partitions. The ones we are looking for will be named as "Microsoft basic data" (if you are using Windows, of course). Then you can see its name as <code><b>/dev/sda1</b></code> OR <code><b>/dev/sda2</b></code> and so on. Be very careful in this step.</p><br>
+
+					  <p>If you still want another way to identify it, let’s say using the name of the partition (Regular D), then you can use:</p><br>
+					  <code><b>mount</b></code>
+
+					  <p><br>But it only works if the partition is mounted, which should probably be the case. The output of the <code><b>mount</b></code> command might overwhelm you, so we can use the grep tool to just get what we need:</p><br>
+					  <code><b>mount | grep Regular</b></code>
+
+					  <p><br>And boom, our partition is once again on <code><b>/dev/sda5</b></code>.</p><br>
+
+					  <h2><u><b>Step 2: Unmount the Partition</b></u></h2><br>
+					  <p>Before I could do anything, I had to unmount the partition. If it’s already mounted, you can’t just jump in and remount it with write access. So, I unmounted it first. Think of it like “disabling” the partition temporarily.</p><br>
+					  <code><b>umount /dev/sda5</b></code>
+
+					  <h2><br><u><b>Step 3: Mount It with Read-Write Access</b></u></h2><br>
+					  <p>Here’s where the magic happens. I used the ntfs-3g driver to mount the partition in read-write mode. Without ntfs-3g, Linux would treat the partition like a locked box you can’t open.</p><br>
+					  <code><b>mount -t ntfs-3g -o rw /dev/sda5 /mnt</b></code>
+
+					  <p><br>If it didn’t work and showed an error like <code><b>unclean file system (0, 0)</b></code>, check the bonus tips for the fix.</p><br>
+
+					  <h2><u><b>Step 4: Verify It’s Really Mounted as Read-Write</b></u></h2><br>
+					  <p>To be 100% sure, I ran a quick check to verify that the partition was mounted in read-write mode. If successful, it should show <code><b>rw</b></code> (read-write) in the output. If you see <code><b>rw</b></code>, you’re good to go!</p><br>
+
+					  <h2><u><b>Step 5: Transfer Files</b></u></h2><br>
+					  <p>Now the fun part: file transfer. I could finally copy files to my “Regular D” drive. No more “read-only” walls stopping me. I just dragged and dropped (well, technically typed a command, but you get it).</p><br>
+
+					  <h2><u><b>Step 6: Unmount When You’re Done</b></u></h2><br>
+					  <p>Once I finished copying everything over, I unmounted the partition again. Always safely eject and unmount before closing up shop.</p><br>
+
+					  <h2><u><b>A Few Bonus Tips</b></u></h2><br>
+					  <ul>
+						<li><strong>Windows Shutdown:</strong> Make sure Windows is completely shut down. Fast Startup or Hibernation mode can lock the NTFS partition. Use Shift + Shut Down to avoid this.</li><br>
+						<li><strong>Use Read-Write Responsibly:</strong> Transfer files and do basic stuff, but don’t mess with system files or make major changes to the partition from Linux.</li><br>
+					  </ul><br>
+
+					  <p>And there you have it! That’s how I mounted my “Regular D” partition on <code><b>/dev/sda5</b></code> in read-write mode and transferred files from my Linux Live USB to my Windows partition.</p><br>
+
+					<blockquote>
+                        “Easy for quick transfers now :D”
                     </blockquote>
                 </article>
             </div>
+			</div>
 			</div>
 
             <!-- Back Button -->
