@@ -1320,7 +1320,11 @@ input, select, textarea {
   .blog-content-wrapper {
     margin-top: 20px !important;
 		
-	 }  
+	 }
+
+  .blog-content {
+	  text-align: justify !important;
+  }	 
   
 }
 
