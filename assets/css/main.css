@@ -405,9 +405,9 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		margin-top: 0;
-		padding-top: 70px;
+		padding-top: calc(var(--topbar-height, 50px));
 		overflow-y: scroll;
-		clip-path: inset(60px 0 0 60px);
+		clip-path: inset(70px 0 0 0);
 		align-items: center;
 	}
 
@@ -1258,7 +1258,6 @@ input, select, textarea {
     flex-direction: row; /* Stack the items vertically */
     align-items: center; /* Center items horizontally */
     text-align: center;
-    padding: 0;
   }
 
   .navbar li {
@@ -1472,7 +1471,7 @@ input, select, textarea {
   background-color: rgba(0, 0, 0, 0.7); /* Sets the background to black */
   /*  color: white; /* Optional: makes text color white for better contrast and readability */
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 1750px;
   justify-items: center;
   margin: auto;
@@ -1487,7 +1486,7 @@ input, select, textarea {
 	left: 0;
 	width: 100%;
 	bottom: 0;
-	font-size: clamp(1.5rem, 5vw, 2rem);
+	font-size: clamp(1.5rem, 2vw, 2rem);
 	font-weight: bold;
 	margin-top: 30px;
 }
