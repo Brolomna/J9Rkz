@@ -1362,6 +1362,9 @@ input, select, textarea {
 .card {
   background-color: #222; /* Dark background */
   color: #fff; /* White text */
+  border: 10px solid #34373700;
+  /* border-image: linear-gradient(45deg, #00f1ff, #00bcd4, #0099CC, #00f1ff); */
+  border-image-slice: 1;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -1370,6 +1373,9 @@ input, select, textarea {
   text-align: center;
   align-content: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  background: linear-gradient(45deg, #00f1ff, #00bcd4, #0099cc, #00f1ff); /* Neon gradient border */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Optional soft shadow for depth */
+  background: linear-gradient(to bottom right, #0a1d38, #1d3a5d);
 }
 
 .card:hover {
@@ -1474,6 +1480,8 @@ input, select, textarea {
   height: fit-content;
   margin-top: calc(var(--topbar-height, 60px));
 }
+
+
 
 .blog-black-wrapper {
   background-color: rgba(0, 0, 0, 0.7); /* Sets the background to black */
