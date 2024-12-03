@@ -408,7 +408,7 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		margin-top: 0;
-		padding-top: calc(var(--topbar-height, 50px));
+		padding-top: calc(var(--topbar-height, 70px));
 		overflow-y: scroll;
 		clip-path: inset(70px 0 0 0);
 		align-items: center;
@@ -1294,7 +1294,8 @@ input, select, textarea {
 	  overflow-x: hidden;
 	  overflow-y: visible;
 	  margin-top: calc(var(--topbar-height, 50px));
-	  clip-path: inset(60px 0 0 0);
+	  clip-path: inset(70px 0 0 0);
+	  padding-bottom: 20px;
 	 }
   
   
