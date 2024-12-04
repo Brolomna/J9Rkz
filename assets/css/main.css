@@ -224,6 +224,8 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		overflow-y: hidden;
+		display: flex;
+		flex-direction: column;
 	}
 
 	#index-wrapper {
@@ -1333,12 +1335,6 @@ input, select, textarea {
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 
-.page-header {
-	position: relative;
-	top: 0;
-	height: auto;
-	line-height: normal;
-}	
 
 .title{
 	font-weight: bold;
@@ -1464,7 +1460,26 @@ input, select, textarea {
   border-radius: 15px;
   text-align: center;
   font-size: clamp(3.5rem, 5vw, 5rem);
+  position: relative;
+  top: 0;
+  height: auto;
+  line-height: normal;
 }
+
+/* For the blog section header */
+.page-header-knowledge {
+  color: #f0f0f0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px;
+  text-align: center;
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  position: relative;
+  top: 0;
+  height: auto;
+  line-height: normal;
+}
+
 
 /* Wrapper for the neon border */
 .blog-content-wrapper {
