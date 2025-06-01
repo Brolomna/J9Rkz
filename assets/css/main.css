@@ -19,7 +19,7 @@ section, summary, time, mark, audio, video {
 	font-size: 115%;
 	font: inherit;
 	vertical-align: baseline;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+	/*text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); */
 	}
 
 code {
@@ -1198,6 +1198,7 @@ input, select, textarea {
   transition: border-bottom 0.2s ease-in-out;
   display: inline-block;
   text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 .navbar a:hover {
@@ -1416,15 +1417,32 @@ input, select, textarea {
 
 /* Blog Content Background Box with Cybersecurity Techy Gradient Border */
 .blog-content {
-  background: linear-gradient(to bottom right, #0a1d38, #1d3a5d); /* Dark blue gradient */
-  color: #f0f0f0; /* Light text for readability */
+  /*background: linear-gradient(to bottom right, #0a1d38, #1d3a5d); /* Dark blue gradient */
+  color: #000000; /* Light text for readability */
+  padding: 30px; /* Space inside the box */
+  margin: 1px; /* Center the box with vertical spacing */
+  width: 70%; /* Responsive width */
+   /* Limit maximum width */
+  border-radius: 15px; /* Rounded corners */
+  text-align: justify; /* Align text to the left */
+
+}
+
+/* Blog Content Background Box with Cybersecurity Techy Gradient Border */
+.blog-content-about {
+  /*background: linear-gradient(to bottom right, #0a1d38, #1d3a5d); /* Dark blue gradient */
+  color: #000000; /* Light text for readability */
   padding: 30px; /* Space inside the box */
   margin: 1px; /* Center the box with vertical spacing */
   width: 100%; /* Responsive width */
    /* Limit maximum width */
   border-radius: 15px; /* Rounded corners */
   text-align: left; /* Align text to the left */
+  text-shadow: 2px 2px 5px rgb(255, 255, 255) !important;
+
 }
+
+
 
 .blog-content article {
 	font-family: 'Montserrat', sans-serif;
@@ -1439,10 +1457,10 @@ input, select, textarea {
   font-weight: bold; /* Make the title bold */
   color: #00f1ff; /* Neon cyan for the title to match the techy theme */
   margin-bottom: 10px; /* Space between title and sub-topic */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for text readability */
+  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for text readability */
   
   /* Neon cyan border under the title */
-  border-bottom: 3px solid #28b7d7; /* Neon cyan border under the title */
+  /*border-bottom: 3px solid #28b7d7; /* Neon cyan border under the title */
 }
 
 
@@ -1453,7 +1471,7 @@ input, select, textarea {
 
 /* For the blog section header */
 .page-header {
-  background: linear-gradient(to bottom right, #0a1d38, #1d3a5d);
+  /*background: linear-gradient(to bottom right, #0a1d38, #1d3a5d); */
   color: #f0f0f0;
   padding: 10px;
   width: 100%;
@@ -1464,6 +1482,7 @@ input, select, textarea {
   top: 0;
   height: auto;
   line-height: normal;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 /* For the blog section header */
@@ -1487,8 +1506,8 @@ input, select, textarea {
   position: relative;
   padding: 6px; /* Space between content and the border */
   border-radius: 15px; /* Rounded corners for the neon border */
-  background: linear-gradient(45deg, #00f1ff, #00bcd4, #0099cc, #00f1ff); /* Neon gradient border */
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Optional soft shadow for depth */
+  /*background: linear-gradient(45deg, #00f1ff, #00bcd4, #0099cc, #00f1ff); /* Neon gradient border */
+  /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Optional soft shadow for depth */
    /* Ensure it doesn’t stretch too far */
   width: 90%;
   max-width: 1750px; /* Limit maximum width */
@@ -1496,12 +1515,15 @@ input, select, textarea {
   height: fit-content;
   margin-top: calc(var(--topbar-height, 60px));
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 
 .blog-black-wrapper {
-  background-color: rgba(0, 0, 0, 0.7); /* Sets the background to black */
+  /*background-color: rgba(255, 253, 245, 100); /* Sets the background to black */
   /*  color: white; /* Optional: makes text color white for better contrast and readability */
   position: relative;
   width: 100%;
@@ -1512,6 +1534,7 @@ input, select, textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: mintcream;
 }
 
 .back-button {
@@ -1519,7 +1542,9 @@ input, select, textarea {
 	left: 0;
 	width: 100%;
 	bottom: 0;
-	font-size: clamp(1.5rem, 2vw, 2rem);
+	/*font-size: clamp(1.5rem, 2vw, 2rem); */
 	font-weight: bold;
 	margin-top: 30px;
+	color: black;
+	font-size: 200%;
 }
