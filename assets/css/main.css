@@ -1536,7 +1536,7 @@ input, select, textarea {
   background: mintcream;
   margin-bottom: 0px;
   margin-top: calc(var(--topbar-height));
-  height: 100vh;
+  height: max-content;
 }
 
 .back-button {
